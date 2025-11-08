@@ -1,0 +1,26 @@
+<p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #header>
+        <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+    </ng-template>
+    @if(config.title) {
+    <ng-template #title> {{config.title}} </ng-template>
+    }
+    @if (config.subtitle) {
+    <ng-template #subtitle> Card subtitle </ng-template>
+    }
+    @if(config.content) {
+    <p>
+        {{config.content}}
+    </p>
+    }@else if (config.contentComponent) {
+      <ng-container #dynamicContainer></ng-container>
+    }
+    <ng-template #footer>
+        <div class="flex gap-4 mt-1">
+          @for(actionItem of config.actionItems; track actionItem.label) {
+            <lib-ngx-button [label]="actionItem.label" [severity]="actionItem.severity" (onClick)="actionItem.action()" class="w-full" styleClass="w-full" />
+            <lib-ngx-button [label]="actionItem.label" [severity]="actionItem.severity" (onClick)="actionItem.action()" class="w-full" styleClass="w-full" />
+          }
+        </div>
+    </ng-template>
+</p-card>

@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { btnVariant } from './models/btnvariant';
-import { buttonLabel } from './models/btnLabel';
+import { buttonSeverity } from './models/btnLabel';
 import { btnSize } from './models/btnSize';
 
 @Component({
@@ -10,7 +10,8 @@ import { btnSize } from './models/btnSize';
   templateUrl: './ngx-button.html',
 })
 export class NgxButton {
-  @Input() label?: buttonLabel;
+  @Input() label?: string;
+  @Input() severity: buttonSeverity = 'primary';
   @Input() icon?: string;
   @Input() disabled?: boolean = false;
   @Input() raised?: boolean = false;
@@ -18,4 +19,5 @@ export class NgxButton {
   @Input() variant?: btnVariant = ''
   @Input() badge?: string;
   @Input() size?: btnSize;
+  @Output() onClick = new EventEmitter<MouseEvent>();
 }

@@ -1,1 +1,1 @@
-export type buttonLabel = 'Primary' | 'Secondary' | 'Success' | 'Info' | 'Warn' | 'Help' | 'Danger' | 'Contrast'
+export type buttonSeverity = 'primary' | 'secondary' | 'success' | 'info' | 'warn' | 'help' | 'danger' | 'contrast'

@@ -1,0 +1,39 @@
+<p-toolbar class="flex justify-between p-3 rounded-2xl">
+
+  <!-- Start Section -->
+  <ng-template #start>
+    <div class="flex items-center gap-2">
+      <!-- Logo -->
+      @if (config.logo?.type === 'svg') {
+        <svg [attr.width]="logoWidth" [attr.height]="logoHeight || '33'" viewBox="0 0 31 33">
+          <path [attr.d]="svgLogo" />
+        </svg>
+       } @else if (config.logo?.type === 'image') {
+        <img [src]="imageLogo" class="mr-3" />
+       } @else if (config.logo?.type === 'component') {
+        <ng-container #logoContainer></ng-container>
+      }
+      <!-- Toolbar items start section -->
+      @for (item of config.items; track item.id) {
+        @if (item.kind === 'button') {
+          <lib-ngx-button
+            [label]="item.label"
+            [icon]="item.icon"
+            [severity]="item.severity"
+            [disabled]="item.disabled"
+            tooltipPosition="bottom"
+            (onClick)="item.action?.()"
+          />
+        } @else if (item.kind === 'menu') {
+          <!-- <p-menu [model]="item.items.map(i => ({ label: i.label, command: i.action }))" popup>
+            <button pButton type="button" label="{{ item.label }}"></button>
+          </p-menu> -->
+         } @else if (item.kind === 'component') {
+          <!-- Dynamic component rendered in AfterViewInit -->
+          <ng-container #dynamicContainer></ng-container>
+        }
+      }
+    </div>
+  </ng-template>
+
+</p-toolbar>
