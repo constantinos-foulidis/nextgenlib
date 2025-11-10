@@ -1,4 +1,4 @@
-<p-toolbar class="flex justify-between p-3 rounded-2xl">
+<p-toolbar [style]="{ 'border-radius': '3rem', 'padding': '1rem 1rem 1rem 1.5rem' }">
 
   <!-- Start Section -->
   <ng-template #start>
@@ -17,6 +17,7 @@
       @for (item of config.items; track item.id) {
         @if (item.kind === 'button') {
           <lib-ngx-button
+            class="mr-2"
             [label]="item.label"
             [icon]="item.icon"
             [severity]="item.severity"
