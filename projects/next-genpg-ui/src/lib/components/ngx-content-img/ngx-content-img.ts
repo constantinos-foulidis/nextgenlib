@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ImageModule } from 'primeng/image';
 @Component({
   selector: 'lib-ngx-content-img',
@@ -7,6 +7,6 @@ import { ImageModule } from 'primeng/image';
   styleUrl: './ngx-content-img.css',
 })
 export class NgxContentImg {
-  imgSrc: string = '';
-  alt: string = 'Content Image';
+  @Input() imgSrc: string = '';
+  @Input() alt: string = 'Content Image';
 }
