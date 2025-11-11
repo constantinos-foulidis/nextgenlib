@@ -12,3 +12,10 @@ export * from './lib/components/ngx-toolbar/ngx-toolbar';
 export * from './lib/components/ngx-toolbar/models/toolbarConfig';
 export * from './lib/components/ngx-card/ngx-card';
 export * from './lib/components/ngx-card/models/configCard';
+
+export * from './lib/components/ngx-topbar/ngx-topbar';
+export * from './lib/components/sidebar/sidebar';
+export * from './lib/components/menu/menu';
+export * from './lib/components/menu/menu-item/menu-item';
+export * from './lib/layouts/main-layout/main-layout';
+export * from './lib/layouts/services/layout';
