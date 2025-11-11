@@ -16,7 +16,7 @@ export class NgxButton {
   @Input() disabled?: boolean = false;
   @Input() raised?: boolean = false;
   @Input() rounded?: boolean = false;
-  @Input() variant?: btnVariant = ''
+  @Input() variant?: btnVariant;
   @Input() badge?: string;
   @Input() size?: btnSize;
   @Output() onClick = new EventEmitter<MouseEvent>();

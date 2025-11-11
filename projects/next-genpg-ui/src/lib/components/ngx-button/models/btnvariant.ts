@@ -1,1 +1,1 @@
-export type btnVariant = 'text' | 'outlined' | ''
+export type btnVariant = 'text' | 'outlined' | undefined
