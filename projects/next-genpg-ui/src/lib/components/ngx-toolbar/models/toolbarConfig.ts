@@ -2,6 +2,7 @@ import { Type } from "@angular/core";
 import { buttonSeverity } from "../../ngx-button/models/btnLabel";
 
 export interface ToolbarConfig {
+  toolbarStyle: [key: string],
   logo?: ToolbarLogo;
   items?: ToolbarItem[]; // fully dynamic items, start & end can be handled via CSS flex
   avatar?: { imageUrl: string; alt?: string; menuItems?: string[] };
