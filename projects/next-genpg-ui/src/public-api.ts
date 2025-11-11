@@ -20,3 +20,4 @@ export * from './lib/components/menu/menu-item/menu-item';
 export * from './lib/layouts/main-layout/main-layout';
 export * from './lib/layouts/services/layout';
 export * from './lib/components/ngx-content-img/ngx-content-img';
+export * from './lib/components/ngx-cardv1/ngx-cardv1';
