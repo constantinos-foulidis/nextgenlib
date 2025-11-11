@@ -20,6 +20,7 @@ export interface ButtonItem extends ToolbarItemBase {
   label: string;
   icon?: string;
   severity: buttonSeverity;
+  size?: 'small' | 'large';
   type?: 'plain' | 'text' | 'outlined' | 'contrast';
   action?: () => void;
   disabled?: boolean;
