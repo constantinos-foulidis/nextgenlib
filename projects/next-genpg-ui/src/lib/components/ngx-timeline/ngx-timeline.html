@@ -1,0 +1,26 @@
+<div class="card">
+    <p-timeline [value]="events" align="alternate" class="customized-timeline">
+        <ng-template #opposite let-event>
+          @if (event.date) {
+            <small class="text-surface-500 dark:text-surface-400">{{ event.date }}</small>
+          }
+        </ng-template>
+        <ng-template #marker let-event>
+            <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style]="{ 'background-color': event.color }">
+                <i [class]="event.icon"></i>
+            </span>
+        </ng-template>
+        <ng-template #content let-event>
+            <p-card [header]="event.status" [subheader]="event.subHeader">
+              @if(event.image){
+                <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image" [alt]="event.name" width="200" class="shadow" />
+              }
+              @if(event.description){
+                <p>
+                    {{ event.description }}
+                </p>
+              }
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>

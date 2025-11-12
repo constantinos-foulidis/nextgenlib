@@ -27,4 +27,7 @@ export * from './lib/components/ngx-not-foundv1/ngx-not-foundv1';
 export * from './lib/components/ngx-placeholder-card/ngx-placeholder-card'
 export * from './lib/layouts/cols/cols';
 export * from './lib/layouts/rows/rows';
+export * from './lib/components/ngx-divider/ngx-divider';
+export * from './lib/components/ngx-timeline/ngx-timeline';
+export * from './lib/components/ngx-timeline/models/timelineModel';
 
