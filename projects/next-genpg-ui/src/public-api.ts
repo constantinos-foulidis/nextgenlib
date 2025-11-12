@@ -22,3 +22,9 @@ export * from './lib/layouts/services/layout';
 export * from './lib/components/ngx-content-img/ngx-content-img';
 export * from './lib/components/ngx-cardv1/ngx-cardv1';
 export * from './lib/components/ngx-cardv2/ngx-cardv2';
+export * from './lib/components/ngx-not-found/ngx-not-found';
+export * from './lib/components/ngx-not-foundv1/ngx-not-foundv1';
+export * from './lib/components/ngx-placeholder-card/ngx-placeholder-card'
+export * from './lib/layouts/cols/cols';
+export * from './lib/layouts/rows/rows';
+
